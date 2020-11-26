@@ -3,6 +3,7 @@ import "./navbar.css";
 
 const brand = window.innerWidth > 600 ? "Laberinto" : "Pathfinder";
 
+
 class NavBar extends Component {
   state = {
     algorithm: "Visualizar Algoritmo",
@@ -71,7 +72,7 @@ class NavBar extends Component {
         this.props.visualizeGreedyBFS();
       else if (this.state.algorithm === "Visualize Bidirectional Greedy")
         this.props.visualizeBidirectionalGreedySearch();
-      else if (this.state.algorithm === "Visualize Breadth First Search")
+      else if (this.state.algorithm === "Visualizar Busqueda en anchura")
         this.props.visualizeBFS();
       else if (this.state.algorithm === "Visualizar Busqueda en profundidad")
         this.props.visualizeDFS();
@@ -179,42 +180,11 @@ class NavBar extends Component {
                   <button
                     className="dropdown-item btn-light"
                     type="button"
-                    onClick={() => this.selectAlgorithm("Visualize Dijkstra")}
-                  >
-                    Dijkstra's Algorithm
-                  </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() => this.selectAlgorithm("Visualize A*")}
-                  >
-                    A* Algorithm
-                  </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() => this.selectAlgorithm("Visualize Greedy BFS")}
-                  >
-                    Greedy Best First Search
-                  </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
                     onClick={() =>
-                      this.selectAlgorithm("Visualize Bidirectional Greedy")
+                      this.selectAlgorithm("Visualizar Busqueda en anchura")
                     }
                   >
-                    Bidirectional Greedy Search
-                  </button>
-                  <div className="dropdown-divider"></div>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() =>
-                      this.selectAlgorithm("Visualize Breadth First Search")
-                    }
-                  >
-                    Breadth First Search
+                    Búsqueda en anchura
                   </button>
                   <button
                     className="dropdown-item btn-light"
@@ -224,15 +194,6 @@ class NavBar extends Component {
                     }
                   >
                     Búsqueda en profundidad
-                  </button>
-                  <button
-                    className="dropdown-item btn-light"
-                    type="button"
-                    onClick={() =>
-                      this.selectAlgorithm("Visualize Random Walk")
-                    }
-                  >
-                    Random Walk
                   </button>
                 </div>
               </div>{" "}
@@ -289,15 +250,6 @@ class NavBar extends Component {
                   </button>
                 </div>
               </div>{" "}
-            </li>
-            <li>
-              <button
-                type="button"
-                className="btn btn-success"
-                onClick={() => this.generateMaze()}
-              >
-                {this.state.maze}
-              </button>
             </li>
             <li>
               <button
