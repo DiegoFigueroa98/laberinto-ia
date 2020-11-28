@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import "./navbar.css";
 
-const brand = window.innerWidth > 600 ? "Laberinto" : "Pathfinder";
-
-
 class NavBar extends Component {
   state = {
     algorithm: "Visualizar Algoritmo",
@@ -158,9 +155,9 @@ class NavBar extends Component {
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <a
           className="navbar-brand h1 mb-0"
-          href="https://ITColimaaug.github.io/pathfinding-visualizer/"
+          href="https://www.itcolima.edu.mx/"
         >
-          {brand}
+          {"Laberinto"}
         </a>
         <div className="navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
@@ -296,6 +293,27 @@ class NavBar extends Component {
                   </button>
                 </div>
               </div>{" "}
+            </li>
+            <li>
+              <a
+                id="myModal"
+                className="btn btn-success"
+                href="#miModal"
+              >
+                {"Créditos"}
+              </a>
+            </li>
+            <li
+              className="credits"
+            >
+              <p>Inteligencia Artificial</p>
+              <p>Noel García Díaz</p>
+              <p className="line"></p>
+              <p>Diego Figueroa</p>
+              <p>Rafael Ochoa</p>
+              <p>Fernando Manzo</p>
+              <p>Karina Alvarez</p>
+              <p>Gabriela Salinas</p>
             </li>
           </ul>
         </div>
